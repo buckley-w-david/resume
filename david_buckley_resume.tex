@@ -15,6 +15,9 @@
 \usepackage{enumitem}
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
 
 
 \pagestyle{fancy}
@@ -35,6 +38,9 @@
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
 
 % Sections formatting
 \titleformat{\section}{
@@ -99,9 +105,6 @@
         \textit{\small Developer} & \textit{\small May 2021 - June 2022} \\
     \end{tabular*}\vspace{-5pt}
       \resumeItemListStart
-        \item\small{
-          \textbf{}{Promoted to Senior Developer after 1 year due to taking on more responsibility managing projects and working with stakeholders. \vspace{-2pt}}
-        }
         \resumeItem{iHub}
           {Built and maintained integrations platform monolith iHub, as well as a number of integrations hosted on the platform.
           
@@ -129,11 +132,23 @@
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
-% \section{Projects}
-%   \resumeSubHeadingListStart
-%     \resumeSubItem{}
-%       {DESCRIPTION}
-%   \resumeSubHeadingListEnd
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{\href{https://github.com/buckley-w-david/webfiction-tracker}{Webfiction Tracker}}
+      {System for keeping up to date on serialized web fiction.
+
+      \resumeItemListStart
+        \item\small{ \textbf{}{Per story RSS and Atom feeds.} }
+        \item\small{ \textbf{}{Per user OPML generation.} }
+        \item\small{ \textbf{}{New chpater webhooks.} }
+        \item\small{ \textbf{}{Automatic EPUB generation with syncing to Calibre.} }
+        \item\small{ \textbf{}{Per story RSS and Atom feeds.} }
+      \resumeItemListEnd}
+    \resumeSubItem{\href{https://github.com/buckley-w-david/discord-interactions-flask}{discord-interactions-flask}}
+      {Framework for write Discord bots as Flask web applications.}
+    \resumeSubItem{\href{https://github.com/buckley-w-david/statusbar}{statusbar}}
+    {Statusbar for window managers that use the root windows WM\_TITLE attribute, such as dwm. }
+  \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------------
 \section{Education}
